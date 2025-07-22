@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Aqualnsight</title>
+    <style>
+        /* CSS */
+        :root {
+            --primary-color: #0288d1;
+            --secondary-color: #81d4fa;
+            --text-color: #333;
+            --background-light: #f9f9f9;
+            --accent-color: #01579b;
+            --white: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 100px; 
+        }
+
+    
+        .container h2 {
+            color: #ff5722; 
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--white);
+            padding: 15px 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 32px;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .contact-section {
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .contact-section a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-section a:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .points-section {
+            background: var(--background-light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .points-section ul {
+            list-style: square;
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .points-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .footer p {
+            color: #777;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll-to-Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .scroll-to-top:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>We're here to assist you. Get in touch with us today!</p>
+    </header>
+
+    <div class="container">
+        <div class="contact-section">
+            <h2>Email Us:</h2>
+            <p><a href="mailto:www.raj.buby@gmail.com">www.raj.buby@gmail.com</a></p>
+            <p><a href="mailto:ayushsaharoy2003@gmail.com">ayushsaharoy2003@gmail.com</a></p>
+            <p><a href="mailto:sampurnadas20.3.04@gmail.com">sampurnadas20.3.04@gmail.com</a></p>
+            <p><a href="mailto:sampurnamallick11@gmail.com">sampurnamallick11@gmail.com</a></p>
+            <p><a href="mailto:Samratmondal899@gmail.com">Samratmondal899@gmail.com</a></p>
+            <p><a href="mailto:aritra21das@gmail.com">aritra21das@gmail.com</a></p>
+        </div>
+
+        <div class="contact-section">
+            <h2>Call Us:</h2>
+            <p><a href="tel:+917029081087">+91 70290 81087</a></p>
+            <p><a href="tel:+919163004729">+91 91630 04729</a></p>
+            <p><a herf="tel+918334976600">+91 83349 76600</a></p>
+            <p><a herf="tel+919163681179">+91 91636 81179</a></p>
+            <p><a herf="tel+917439700545">+91 74397 00545</a></p>
+            <p><a herf="tel+919064422619">+91 90644 22619</a></p>
+        </div>
+
+        <div class="points-section">
+            <h2>Why Choose Aqualnsight?</h2>
+            <ul>
+                <li>Dedicated support to answer your queries.</li>
+                <li>Quick response to emails and calls.</li>
+                <li>Highly experienced team ready to assist you.</li>
+                <li>Customer satisfaction is our top priority.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Aqualnsight. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&uarr;</button>
+
+    <script>
+     
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>

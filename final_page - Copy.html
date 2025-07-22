@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Additional Features - Ground Water Level Predictor</title>
+  <link rel="stylesheet" href="final_page.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Aqualnsight</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="water.html" class="cta-btn">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="hero">
+      <h2>Additional Features of Ground Water Prediction</h2>
+    </section>
+
+    <section class="features">
+      <h3>Ground Water Level Prediction</h3>
+      <p>Get detailed information on the basis of Adaboost Regressor, K-Neigherst Neighbour Model.</p>
+
+      <!-- Form to Get More Information -->
+      <section class="loc">
+        <div class="container1">
+          <h1>Get Information Based on Location, Date & Time</h1>
+          <div class="form">
+            <a id="enter-info-link" href="#" target="_blank">
+              <button id="enter-info-btn">Enter Information</button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="map-navigation">
+          <h3>Explore Groundwater Levels</h3>
+          <a id="view-map-link" href="#" target="_blank">
+            <button id="view-map-btn">View Groundwater Level on Map</button>
+          </a>
+        </div>
+      </section>
+
+      <section class="feature2">
+        <div class="map-navigation2">
+          <h3>View Groundwater Levels and Rainfall</h3>
+          <a id="view-future-map-link" href="#" target="_blank">
+            <button id="view-future-map-btn">View Groundwater Level for Future </button>
+          </a>
+        </div>
+      </section>
+      
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Backend URL for "Enter Information" button (backend.py)
+        const backendUrl = "http://127.0.0.1:5001";
+        const enterInfoLink = document.getElementById("enter-info-link");
+        enterInfoLink.href = backendUrl;
+
+        // Backend URL for "View Groundwater Level on Map" button (app.py)
+        const mapUrl = "http://127.0.0.1:5000"; 
+        const viewMapLink = document.getElementById("view-map-link");
+        viewMapLink.href = mapUrl;
+        
+        // Backend URL for "View Groundwater Level for Future" button
+        const futureUrl = "http://127.0.0.1:5002"; 
+        const viewfutureMapLink = document.getElementById("view-future-map-link");
+        viewfutureMapLink.href = futureUrl;
+    });
+</script>
+
+
+  <script src="final_page.js"></script>
+  <!-- Scroll-to-Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">&uarr;</button>
+
+<style>
+ 
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #004c70;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none; 
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .scroll-to-top:hover {
+    background: #002c48;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+
+  window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

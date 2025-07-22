@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - AquaInsight</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0288d1, #0277bd);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #0277bd;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        a {
+            color: #0277bd;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Terms and Conditions</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome to Aqualnsight</h2>
+        <p>These terms and conditions outline the rules and regulations for the use of the AquaInsight application and website.</p>
+
+        <h2>Usage Guidelines</h2>
+        <p>By accessing this application, we assume you accept these terms and conditions. Do not continue to use AquaInsight if you do not agree to all the terms and conditions stated on this page.</p>
+        <ul>
+            <li>You must not use the app for unlawful purposes.</li>
+            <li>You agree not to reverse engineer or modify the app without permission.</li>
+            <li>We reserve the right to suspend or terminate access to users who violate these terms.</li>
+        </ul>
+
+        <h2>Intellectual Property</h2>
+        <p>The content, features, and functionality of this app, including text, graphics, logos, and software, are owned by AquaInsight and are protected by copyright, trademark, and other laws.</p>
+
+        <h2>Limitation of Liability</h2>
+        <p>AquaInsight and its developers will not be held liable for any damages arising from the use or inability to use the app, including but not limited to data loss or business interruptions.</p>
+
+        <h2>Privacy</h2>
+        <p>Your privacy is important to us. For details, please review our <a href="privacy.html">Privacy Policy</a>.</p>
+
+        <h2>Modifications</h2>
+        <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting, and your continued use of the app signifies your acceptance of the updated terms.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about these terms, please contact us <a href="contact.html">Here</a>.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 AquaInsight. All rights reserved.</p>
+    </footer>
+    <!-- Scroll-to-Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">&uarr;</button>
+
+<style>
+  /* Scroll-to-Top Button Styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #004c70;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .scroll-to-top:hover {
+    background: #002c48;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+  // Scroll-to-Top Functionality
+  window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

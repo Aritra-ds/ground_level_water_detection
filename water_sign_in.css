@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.sign-in-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.brand-title {
+    font-size: 2rem; /* Adjusted for better fit */
+    color: #55ff00;
+    font-weight: 700;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+/* Sign-In Section */
+.sign-in-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px; /* Reduced padding */
+    max-width: 360px; /* Reduced width for smaller screens */
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-in-out;
+    overflow-y: auto; /* Enable scrolling if needed */
+    max-height: 90vh; /* Ensure it fits within the viewport */
+}
+
+.sign-in-section h2 {
+    color: #f214c9;
+    margin-bottom: 15px; /* Adjusted margin */
+    font-weight: 500;
+}
+
+.sign-in-section label {
+    font-size: 0.8rem; /* Reduced font size */
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.sign-in-section input {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+.sign-in-section input:focus {
+    border-color: #0288d1;
+    outline: none;
+    box-shadow: 0 0 4px rgba(2, 136, 209, 0.5);
+}
+
+.sign-in-section button {
+    width: 100%;
+    padding: 10px; /* Adjusted padding */
+    background: linear-gradient(90deg, #ff5722, #0288d1);
+    border: none;
+    color: #fff;
+    font-size: 0.9rem; /* Adjusted font size */
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.sign-in-section button:hover {
+    transform: scale(1.02); /* Adjusted scale for smoother interaction */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+#locationStatus {
+    font-size: 0.8rem; /* Reduced font size */
+    color: #666;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sign-in-section {
+        padding: 15px; /* Reduced padding for smaller screens */
+        max-width: 95%; /* Allow more width for mobile devices */
+    }
+
+    .brand-title {
+        font-size: 1.8rem; /* Adjusted font size */
+    }
+
+    .sign-in-section input,
+    .sign-in-section button {
+        font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+}

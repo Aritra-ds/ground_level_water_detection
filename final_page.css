@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #00bcd4, #ff5722);
+  color: #fff;
+}
+
+header {
+  background-color: #009688; 
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #00796b;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #004d40;
+}
+
+.hero {
+  background: url('https://downloadwap.com/thumbs3/screensavers/d/new/abstract/water-240581.gif') no-repeat center center;
+  background-size: cover;
+  color: #ffeb3b;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Styles for container1 */
+.container1 {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+}
+
+.container1 h1 {
+  font-size: 28px;
+  color: #009688;
+  margin-bottom: 20px;
+}
+
+.container1 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container1 .form label {
+  font-size: 16px;
+  color: #333;
+}
+
+.container1 .form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.container1 .form button {
+  background-color: #00796b;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container1 .form button:hover {
+  background-color: #004d40;
+}
+
+.container1 #location-info {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e0f7fa;
+  border: 1px solid #009688;
+  border-radius: 5px;
+  color: #00796b;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+
+.features {
+  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+.features h3 {
+  font-size: 24px;
+  color: #ff6c22;
+}
+.feature2 {
+  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #566e6a;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+.feature2 h3 {
+  font-size: 24px;
+  color: #3822ff;
+}
+.info-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.info-form button {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-form button:hover {
+  background-color: #e64a19;
+}
+
+.info-result {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ff5722;
+  background-color: #fff3e0;
+  color: #000;
+}
+.map-navigation {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-navigation button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.map-navigation button:hover {
+  background-color: #388e3c;
+}
+.map-navigation2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-navigation2 button {
+  background-color: #ba487c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.map-navigation2 button:hover {
+  background-color: #3e388e;
+}
+  

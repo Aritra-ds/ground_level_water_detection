@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groundwater Level Prediction</title>
+    <style>
+        /* Header styles */
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f1f1f1;
+        }
+
+     
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 70px 0 0; /* Adjust padding to account for fixed header height */
+            background-color: #1a27e0;
+        }
+
+        /* Dashboard styles */
+        .dashboard {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            color: rgb(236, 238, 226);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background-color: #e70cb1;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* New message and line under the header */
+        .total-message {
+            text-align: center;
+            margin-top: 20px; /* Space between the header and message */
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .divider {
+            width: 80%;
+            margin: 10px auto;
+            border: 1px solid #fff;
+        }
+
+        .total-message span {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        /* Image container and grid styles */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Space between rows */
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 25px; /* Slightly more space between boxes */
+        }
+
+        .box {
+            width: 276px; /* Increased box width for larger images */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 12px; /* Increased padding for a cleaner look */
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Add a hover effect for images */
+        .box img:hover {
+            transform: scale(1.05); /* Slight zoom-in effect */
+        }
+
+        /* Modal styles */
+        #enlargedImage {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #enlargedImage img {
+            max-width: 85%; /* Slightly larger modal image */
+            max-height: 90%; /* Prevent overflow vertically */
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styles */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .close-btn:hover {
+            color: #f44336; /* Highlight effect on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Aqualnsight</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="water.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard">
+        <div class="header">
+            <h1>GROUND WATER LEVEL PREDICTION DASHBOARD</h1>
+        </div>
+        
+        <!-- New message and line under the header -->
+        <div class="total-message">
+            <hr class="divider">
+            <span>Click to view the images properly</span>
+        </div>
+        
+        <div class="image-container">
+            <div class="row">
+                <div class="box"><img src="1w.png" alt="Image 9" class="clickable-img"></div>
+                <div class="box"><img src="pie.png" alt="Image 4" class="clickable-img"></div>
+                <div class="box"><img src="1y.png" alt="Image 6" class="clickable-img"></div>
+            </div>
+            <div class="row">
+                <div class="box"><img src="1x.png" alt="Image 3" class="clickable-img"></div>
+                <div class="box"><img src="gw_level vs soil porosity.png" alt="Image 1" class="clickable-img"></div>
+                <div class="box"><img src="gw_level vs landuse.png" alt="Image 5" class="clickable-img"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Enlarged Image -->
+    <div id="enlargedImage" class="modal">
+        <span id="close-btn" class="close-btn">&times;</span>
+        <img id="large-img" src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.clickable-img');
+        const enlargedImageContainer = document.getElementById('enlargedImage');
+        const enlargedImage = document.getElementById('large-img');
+        const closeButton = document.getElementById('close-btn');
+
+        images.forEach(image => {
+            image.addEventListener('click', function () {
+                enlargedImage.src = this.src;
+                enlargedImageContainer.style.display = 'flex';
+            });
+        });
+
+        closeButton.addEventListener('click', function () {
+            enlargedImageContainer.style.display = 'none';
+        });
+
+        enlargedImageContainer.addEventListener('click', function (event) {
+            if (event.target === enlargedImageContainer) {
+                enlargedImageContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

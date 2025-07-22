@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protect Groundwater</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+      margin: 0;
+      padding: 0;
+      color: #004d40;
+    }
+    header {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 15px 10px; 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header h1 {
+  margin: 5px 0; 
+  font-size: 24px;
+}
+header p {
+  margin: 5px 0; 
+  font-size: 14px; 
+}
+.container {
+  padding: 80px 20px 40px; 
+  text-align: center;
+}
+
+    h2 {
+      color: #00796b;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .precaution-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card i {
+      font-size: 50px;
+      color: #004d40;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      color: #00796b;
+      margin: 10px 0;
+    }
+    .card p {
+      color: #555;
+      font-size: 16px;
+    }
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .precaution-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Precautions to Preserve Groundwater</h1>
+    <p>Simple steps to help conserve and protect our precious groundwater resources.</p>
+  </header>
+
+  <div class="container">
+    <h2>Take Action Today!</h2>
+    <div class="precaution-cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <i class="fas fa-leaf"></i>
+        <h3>Use Native Plants</h3>
+        <p>Native plants require less water and fertilizer, reducing the strain on groundwater and promoting a healthy ecosystem.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <i class="fas fa-ban"></i>
+        <h3>Limit Chemical Use</h3>
+        <p>Avoid using chemicals around your home, as they can contaminate groundwater and harm the ecosystem.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <i class="fas fa-trash-alt"></i>
+        <h3>Proper Waste Disposal</h3>
+        <p>Dispose of toxic substances like chemicals and pharmaceuticals properly to prevent contamination of groundwater sources.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <i class="fas fa-water"></i>
+        <h3>Avoid Water Wastage</h3>
+        <p>Be mindful of your water usage. Turn off taps when not in use to prevent unnecessary wastage of valuable resources.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="card">
+        <i class="fas fa-wrench"></i>
+        <h3>Fix Leaks</h3>
+        <p>Leaking pipes and fixtures waste water. Fix leaks promptly to conserve water and reduce unnecessary groundwater depletion.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card">
+        <i class="fas fa-shower"></i>
+        <h3>Limit Shower Time</h3>
+        <p>Taking shorter showers helps reduce water consumption, conserving both water and the energy used to heat it.</p>
+      </div>
+      <!-- Card 7 -->
+      <div class="card">
+        <i class="fas fa-lemon"></i>
+        <h3>Water Plants Smartly</h3>
+        <p>Water plants only when necessary and during cooler times of the day to minimize water loss due to evaporation.</p>
+      </div>
+      <!-- Card 8 -->
+      <div class="card">
+        <i class="fas fa-recycle"></i>
+        <h3>Reduce Waste</h3>
+        <p>Recycling reduces the amount of waste that ends up in landfills, which helps reduce contamination of groundwater supplies.</p>
+      </div>
+      <!-- Card 9 -->
+      <div class="card">
+        <i class="fas fa-broom"></i>
+        <h3>Use Non-Toxic Cleaners</h3>
+        <p>Choose eco-friendly, non-toxic cleaning products to prevent harmful chemicals from entering the water supply.</p>
+      </div>
+      <!-- Card 10 -->
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>Educate Others</h3>
+        <p>Share your knowledge about water conservation to raise awareness and inspire action to preserve groundwater.</p>
+      </div>
+    </div>
+  </div>
+<!-- Scroll-to-Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">&uarr;</button>
+
+<style>
+ 
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #004c70;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .scroll-to-top:hover {
+    background: #002c48;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+
+  window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+ 
+</body>
+</html>

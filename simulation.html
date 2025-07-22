@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Flow Simulation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(circle, #001f3f, #000);
+    }
+
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="waterCanvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById('waterCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas size to full screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const width = canvas.width;
+    const height = canvas.height;
+
+    // Create a grid to simulate water flow
+    const gridCols = 200;
+    const gridRows = 200;
+    const grid = [];
+    for (let y = 0; y < gridRows; y++) {
+      const row = [];
+      for (let x = 0; x < gridCols; x++) {
+        row.push(Math.random() * 5); // Random initial water levels
+      }
+      grid.push(row);
+    }
+
+    const cellWidth = width / gridCols;
+    const cellHeight = height / gridRows;
+
+    function simulateFlow() {
+      const newGrid = [];
+      for (let y = 0; y < gridRows; y++) {
+        const row = [];
+        for (let x = 0; x < gridCols; x++) {
+          const neighbors = [];
+          if (y > 0) neighbors.push(grid[y - 1][x]);
+          if (y < gridRows - 1) neighbors.push(grid[y + 1][x]);
+          if (x > 0) neighbors.push(grid[y][x - 1]);
+          if (x < gridCols - 1) neighbors.push(grid[y][x + 1]);
+
+          const avgNeighbor = neighbors.reduce((a, b) => a + b, 0) / neighbors.length;
+          const flow = (avgNeighbor - grid[y][x]) * 0.2; // Flow intensity
+          row.push(grid[y][x] + flow);
+        }
+        newGrid.push(row);
+      }
+      return newGrid;
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      for (let y = 0; y < gridRows; y++) {
+        for (let x = 0; x < gridCols; x++) {
+          const waterLevel = grid[y][x];
+          const blueValue = Math.min(255, Math.max(0, waterLevel * 50));
+          ctx.fillStyle = `rgba(0, ${Math.floor(blueValue / 2)}, ${Math.floor(blueValue)}, 0.9)`;
+          ctx.fillRect(x * cellWidth, y * cellHeight, cellWidth, cellHeight);
+        }
+      }
+
+      // Add shimmering effect
+      ctx.globalCompositeOperation = "lighter";
+      ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+      for (let i = 0; i < 100; i++) {
+        const x = Math.random() * width;
+        const y = Math.random() * height;
+        ctx.beginPath();
+        ctx.arc(x, y, Math.random() * 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalCompositeOperation = "source-over";
+    }
+
+    function animate() {
+      grid.forEach((row, y) => {
+        grid[y] = row.map((_, x) => grid[y][x] + (Math.random() - 0.5) * 0.1);
+      });
+      const newGrid = simulateFlow();
+      for (let y = 0; y < gridRows; y++) {
+        for (let x = 0; x < gridCols; x++) {
+          grid[y][x] = newGrid[y][x];
+        }
+      }
+      draw();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+  
+</body>
+</html>
+

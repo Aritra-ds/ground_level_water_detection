@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extra Features - Ground Water Level Predictor</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #9c97a8, #c3afbd);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      position: fixed;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #4e22b7, #ca91ba);
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    header .logo h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    main h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin: 20px 0;
+      color: #444;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .back-home-btn {
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .back-home-btn:hover {
+      background: linear-gradient(90deg, #ff7eb3, #ff758c);
+      transform: translateY(-3px);
+    }
+
+    .exclusive-features {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      padding: 40px;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .exclusive-features h3 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .exclusive-features p {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .features-grid a.feature-box {
+      text-decoration: none;
+      background: #fff;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: inherit;
+      display: block;
+    }
+
+    .features-grid a.feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-box i {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #6a11cb;
+    }
+
+    .feature-box img {
+      max-width: 50px;
+      margin-bottom: 10px;
+    }
+
+    .feature-box h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .feature-box p {
+      color: #777;
+    }
+
+    .sign-in-prompt {
+      text-align: center;
+      margin: 20px 0;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .sign-in-prompt h3 {
+      margin-bottom: 10px;
+      font-size: 1.8em;
+      color: #3f51b5;
+    }
+
+    .sign-in-prompt p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .sign-in-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #ff6666, #ff2945);
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .sign-in-btn:hover {
+      background: linear-gradient(90deg, #1fce6e, #f8f413);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: #fff;
+    }
+
+    footer .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 10px 0;
+    }
+
+    .social-icon {
+      color: #fff;
+      font-size: 1.5em;
+      transition: color 0.3s ease, transform 0.2s;
+    }
+
+    .social-icon:hover {
+      color: #ff7eb3;
+      transform: rotate(10deg);
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #004c70;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .scroll-to-top:hover {
+      background: #002c48;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Aqualnsight</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="extra-features" class="extra-features">
+      <div class="container">
+        <div class="navigation-buttons">
+          <a href="water.html" class="back-home-btn">Back to Home</a>
+        </div>
+        <h2>Discover Our Advanced Features</h2>
+
+        <div class="exclusive-features">
+          <h3>Exclusive Features for Advanced Insights</h3>
+          <p>Explore our state-of-the-art features designed to give you unparalleled insights into groundwater conditions.</p>
+        </div>
+        
+        <div class="sign-in-prompt">
+          <h3>Access Exclusive Features</h3>
+          <p>To access advanced features, please Subscribe.</p>
+          <a href="subscription.html" class="sign-in-btn">Subscribe</a>
+        </div>
+        
+        <div class="features-grid">
+          <a href="subscription.html" class="feature-box">
+            <i class="fas fa-chart-line"></i>
+            <h3>High Accuracy Water Level Prediction</h3>
+            <p>Advanced algorithms provide highly accurate predictions for informed decisions.</p>
+          </a>
+          <a href="subscription.html" class="feature-box">
+            <i class="fas fa-vial"></i>
+            <h3>Water Minerals Quantity</h3>
+            <p>Assess mineral quantities for various water usage needs.</p>
+          </a>
+          <a href="subscription.html" class="feature-box">
+            <img src="https://cdn4.vectorstock.com/i/1000x1000/74/28/jug-pour-out-milk-or-water-canister-simple-logo-vector-23367428.jpg" alt="Drinkability Logo">
+            <h3>Drinkability of Water</h3>
+            <p>Detailed analysis ensures safety for consumption.</p>
+          </a>
+          <a href="subscription.html" class="feature-box">
+            <i class="fas fa-skull-crossbones"></i>
+            <h3>Harmful Components Detection</h3>
+            <p>Identify contaminants and ensure water safety.</p>
+          </a>
+          <a href="subscription.html" class="feature-box">
+            <i class="fas fa-percentage"></i>
+            <h3>Percentage of Drinkable Water</h3>
+            <p>Estimate the purity and safety of water for drinking.</p>
+          </a>
+          <a href="subscription.html" class="feature-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Distance of Fresh Water</h3>
+            <p>Locate fresh water sources from ground level.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Aqualnsight. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/share/vfpM3uuqkvnbCmYc/" class="social-icon"><i class="fab fa-facebook"></i></a>
+     
+      <a href="https://www.instagram.com/aqualnsight43/profilecard/?igsh=cXl3YnR5emt3eTRw" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Scroll to top button functionality
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'block';
+      } else {
+        scrollToTopButton.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

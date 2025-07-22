@@ -1,0 +1,318 @@
+/* Basic styling for the body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header styles */
+/* Header styles */
+header {
+  background-color:  #a72874;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Navigation styles */
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  color: darkgoldenrod;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Features Button Style */
+.features-btn {
+ /* Green */
+ background-color:  #fff;
+  border: 2px solid #1dc8d5;
+}
+
+.features-btn:hover {
+  background-color: #fff;
+  color: #28a745;
+  transform: scale(1.05);
+}
+
+/* Sign-In Button Style */
+.sign-in-btn {
+  background-color: #ff5733; /* Orange-Red */
+  color: #fff;
+  border: 2px solid #ff5733;
+}
+
+.sign-in-btn:hover {
+  background-color: #fff;
+  color: #ff5733;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+.extra-features {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.extra-features h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Navigation Buttons Styles */
+.navigation-buttons {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.back-home-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Sign-In Prompt Styles */
+.sign-in-prompt {
+  background-color: #f0f8ff;
+  border: 1px solid #e0e7ef;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in-prompt h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.sign-in-prompt p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.sign-in-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Features Grid Styles */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  background-color: #e9f5f2;
+  border: 1px solid #d0e5e1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-icon {
+  font-size: 48px;
+  color: #007bff;
+}
+.feature-box h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.feature-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Footer styles */
+footer {
+  background-color: #00ff73;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .extra-features {
+    padding: 20px;
+  }
+
+  .extra-features h2 {
+    font-size: 28px;
+  }
+
+  .feature-box h3 {
+    font-size: 20px;
+  }
+
+  .feature-box p {
+    font-size: 14px;
+  }
+}
+
+/* Modal Styles */
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4);
+padding-top: 60px;
+}
+
+.modal-content {
+background-color: #fff;
+margin: 5% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 500px;
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+#subscriptionForm {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+#subscriptionForm label {
+font-weight: bold;
+color: #333;
+}
+
+#subscriptionForm input {
+padding: 10px;
+border-radius: 4px;
+border: 1px solid #ddd;
+width: 100%;
+}
+
+#subscriptionForm button {
+background-color: #007bff;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+
+#subscriptionForm button:hover {
+background-color: #0056b3;
+}

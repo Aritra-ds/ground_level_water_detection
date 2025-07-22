@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groundwater Crisis: Future Side Effects</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ffcccb, #f2b3b0);
+      margin: 0;
+      padding: 0;
+      color: #d32f2f;
+    }
+    header {
+      background: #d32f2f;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+    h2 {
+      color: #d32f2f;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .sideeffects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+    .effect-card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .effect-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .effect-card i {
+      font-size: 50px;
+      color: #d32f2f;
+      margin-bottom: 15px;
+    }
+    .effect-card h3 {
+      color: #b71c1c;
+      margin: 10px 0;
+    }
+    .effect-card p {
+      color: #555;
+      font-size: 16px;
+    }
+    .alert-box {
+      background-color: #ff5722;
+      color: white;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+    footer {
+      background: #d32f2f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .sideeffects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Groundwater Crisis: Side Effects of Depletion</h1>
+    <p>Learn about the consequences of insufficient groundwater and take action before it's too late.</p>
+  </header>
+
+  <div class="container">
+    <div class="alert-box">
+      <i class="fas fa-exclamation-triangle"></i> <strong>ALERT:</strong> Groundwater depletion can lead to severe consequences. Immediate actions are needed!
+    </div>
+    
+    <h2>Potential Side Effects of Groundwater Depletion</h2>
+    <div class="sideeffects">
+      <!-- Card 1 -->
+      <div class="effect-card">
+        <i class="fas fa-tree"></i>
+        <h3>Loss of Vegetation</h3>
+        <p>Without adequate groundwater, crops and plants will wither, leading to reduced agricultural productivity and food shortages.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="effect-card">
+        <i class="fas fa-building"></i>
+        <h3>Building Infrastructure Damage</h3>
+        <p>Lowered groundwater levels can lead to the sinking of buildings and roads due to the loss of support from the underground water supply.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="effect-card">
+        <i class="fas fa-pump-medical"></i>
+        <h3>Water Scarcity</h3>
+        <p>Groundwater is a critical source of drinking water. As levels drop, many communities will face severe water scarcity, impacting daily life and health.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="effect-card">
+        <i class="fas fa-briefcase-medical"></i>
+        <h3>Health Issues</h3>
+        <p>Reduced groundwater can lead to contamination of available water sources, increasing the spread of waterborne diseases.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="effect-card">
+        <i class="fas fa-cloud-rain"></i>
+        <h3>Weather Changes</h3>
+        <p>Depletion of groundwater can impact local climate patterns, leading to harsher droughts and unpredictable weather.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="effect-card">
+        <i class="fas fa-tractor"></i>
+        <h3>Agriculture Collapse</h3>
+        <p>Agriculture depends heavily on groundwater for irrigation. Its depletion will cause widespread crop failure and famine.</p>
+      </div>
+      <!-- Card 7 -->
+      <div class="effect-card">
+        <i class="fas fa-fish"></i>
+        <h3>Loss of Aquatic Life</h3>
+        <p>Falling groundwater levels can dry up rivers and lakes, destroying habitats and threatening aquatic species.</p>
+      </div>
+      <!-- Card 8 -->
+      <div class="effect-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Economic Instability</h3>
+        <p>Groundwater depletion affects industries and agriculture, leading to economic losses, unemployment, and societal instability.</p>
+      </div>
+    </div>
+  </div>
+<!-- Scroll-to-Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">&uarr;</button>
+
+<style>
+  /* Scroll-to-Top Button Styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #004c70;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .scroll-to-top:hover {
+    background: #002c48;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+  // Scroll-to-Top Functionality
+  window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

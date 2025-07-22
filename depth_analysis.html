@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Groundwater Recharge</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+      color: #004d40;
+    }
+    header {
+      background: #004d40;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #00796b;
+    }
+    .info-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .info-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .info-card h3 {
+      color: #004d40;
+    }
+    .info-card p {
+      font-size: 14px;
+      color: #555;
+    }
+    footer {
+      background: #004d40;
+      color: #ffffff;
+      padding: 10px;
+      text-align: center;
+    }
+    .image-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .image-container img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Natural Groundwater Recharge</h1>
+    <p>Understanding the natural processes that replenish our vital groundwater resources.</p>
+  </header>
+  <div class="container">
+    <h2>How Groundwater is Naturally Replenished</h2>
+    <div id="natural-process" class="info-section">
+      <!-- First Row -->
+      <div class="info-card">
+        <h3>Rainfall Infiltration</h3>
+        <p>Rainwater is the most common way for groundwater to be replenished. It falls to the ground and seeps through the soil to enter aquifers. The soil’s permeability, which depends on its texture and structure, determines how easily the water can penetrate and reach underground layers. The water not only helps recharge groundwater but also provides moisture for plant growth.</p>
+      </div>
+      <div class="info-card">
+        <h3>River and Stream Seepage</h3>
+        <p>Rivers and streams play a key role in replenishing groundwater by slowly seeping water into the surrounding soil and rock layers. This process, known as baseflow, ensures a steady supply of groundwater, especially during dry periods when rainfall is scarce. The seepage from rivers into aquifers is especially important in regions where groundwater is heavily used for irrigation and drinking water.</p>
+      </div>
+      <!-- Second Row -->
+      <div class="info-card">
+        <h3>Soil Permeability</h3>
+        <p>Soil permeability is the ability of the soil to transmit water through it. Soils with high permeability, such as sandy soils, allow water to flow through quickly, facilitating groundwater recharge. Conversely, soils with low permeability, like clay, slow down the movement of water. The combination of different soil types in an area determines the efficiency of groundwater recharge.</p>
+      </div>
+      <div class="info-card">
+        <h3>Vegetation and Forests</h3>
+        <p>Vegetation, particularly forests, plays an essential role in groundwater recharge. The roots of plants and trees help to break up the soil, making it more porous and allowing water to infiltrate more easily. Additionally, plants reduce surface runoff by intercepting rainwater, allowing it to soak into the ground. Forests also help maintain a stable water cycle by providing shade that prevents rapid evaporation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://i0.wp.com/mavensnotebook.com/wp-content/uploads/2020/06/Groundwater-diagram-1.jpg?fit=3408%2C2181&ssl=1" alt="Groundwater Recharge Process">
+    <p><i>Diagram illustrating the groundwater recharge process.</i></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Nature's Cycle. All rights reserved.</p>
+  </footer>
+  <!-- Scroll-to-Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">&uarr;</button>
+
+<style>
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #004c70;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none; 
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .scroll-to-top:hover {
+    background: #002c48;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+
+  window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

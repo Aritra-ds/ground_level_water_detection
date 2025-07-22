@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ground Water Level Predictor - Sign In</title>
+    <link rel="stylesheet" href="water_sign_in.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sign-in Page -->
+    <section class="sign-in-hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 class="brand-title">Ground Water Level Predictor</h1>
+            <div class="sign-in-section">
+                <h2>Sign In</h2>
+                <form id="signInForm" action="final_page.html" method="get" onsubmit="return validateForm()">
+                    <!-- Create Username -->
+                    <label for="createUsername">Create your Username:</label>
+                    <input type="text" id="createUsername" name="createUsername" placeholder="Choose a username" required>
+
+                    <!-- Create Password -->
+                    <label for="createPassword">Create your Password:</label>
+                    <input type="password" id="createPassword" name="createPassword" placeholder="Create a password" required>
+
+                    <!-- Confirm Password -->
+                    <label for="confirmPassword">Confirm your Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+                    <!-- Name, Town, State, PIN, Location, etc. -->
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" placeholder="Enter your name" required>
+
+                    <label for="town">Town/Village Name:</label>
+                    <input type="text" id="town" name="town" placeholder="Enter your town/village" required>
+
+                    <label for="state">State Name:</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state" required>
+
+                    <label for="pinNumber">PIN Number:</label>
+                    <input type="text" id="pinNumber" name="pinNumber" placeholder="Enter a 6-digit PIN" required pattern="\d{6}" title="Enter a valid 6-digit PIN number">
+
+                    <button type="button" id="getLocation">Get Location</button>
+                    <p id="locationStatus">Location will appear here.</p>
+
+                    <label for="mobileNumber">Mobile Number:</label>
+                    <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Enter your mobile number" pattern="\d{10}" title="Enter a valid 10-digit mobile number">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+                    <button type="submit" class="cta-btn signin-btn">Sign In</button>
+                    <p id="usernameMessage"></p> <!-- Display the username message -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="water_sign_in.js"></script>
+</body>
+</html>

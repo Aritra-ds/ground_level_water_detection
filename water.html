@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aqualnsight: Predict groundwater levels with precision using advanced algorithms.">
+  <title>Aqualnsight</title>
+  <link rel="stylesheet" href="water.css">
+  <!-- Link to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Link to Swiper.js for carousel functionality -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <!-- Header with sign-in button -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Aqualnsight</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="water_about.html" class="cta-btn about-btn">About</a></li>
+          <li><a href="extra_features_2.html" class="cta-btn extra-btn">Extra features</a></li>
+          <li><a href="water_sign_in.html" class="cta-btn signin-btn">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h4>Predict Ground Water Levels with Precision</h4>
+        <p>Leverage advanced algorithms to get real-time, accurate predictions of groundwater levels. Make informed decisions with our intuitive tool.</p>
+        
+      </div>
+    </section>
+
+   <!-- Updated HTML: Dynamic Effects Section -->
+<!-- Updated HTML: Dynamic Effects Section -->
+<section id="dynamic-effects" class="dynamic-effects">
+  <div class="effects-container">
+    <h3>Discover Groundwater Insights</h3>
+    <p>Explore the Details.</p>
+    <div class="effects-grid">
+      <div class="effect-item">
+        <a href="water_flow.html" class="circle" id="circle1"></a>
+        <p>Sideffects of lack of Groundwater level</p>
+      </div>
+      <div class="effect-item">
+        <a href="aquifer.html" class="circle" id="circle2"></a>
+        <p> Precaution to preserve Groundwater level</p>
+      </div>
+      <div class="effect-item">
+        <a href="depth_analysis.html" class="circle" id="circle3"></a>
+        <p>Natural Filling Process of Groundwaterlevel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Link to CSS file -->
+<link rel="stylesheet" href="water.css">
+
+<!-- Link to JavaScript file -->
+<script src="water.js"></script>
+<!-- Sliding Effect Section -->
+<section id="sliding-images" class="sliding-images">
+  <h3>Explore the World of Groundwater</h3>
+  <div class="swiper-container sliding-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <p class="slide-heading" style="color: #ff5733;">Water Extraction</p>
+        <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs13762-022-04356-9/MediaObjects/13762_2022_4356_Fig1_HTML.png" alt="Aquifer Mapping">
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <p class="slide-heading" style="color: #33c1ff;">Understanding Groundwater Levels</p>
+        <img src="https://www.bgs.ac.uk/wp-content/uploads/2018/07/3DGWVPressRelease.jpg" alt="Sustainability">
+      </div>
+    
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <p class="slide-heading" style="color: #ff33a6;">Ground Water Dependencies</p>
+        <img src="https://www.rainyfilters.com/static/images/blogs/groundWaterRecharge.jpg" alt="Water Conservation">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sliding-pagination"></div>
+    <!-- Add Navigation Buttons -->
+    <div class="swiper-button-next sliding-next"></div>
+    <div class="swiper-button-prev sliding-prev"></div>
+  </div>
+</section>
+
+<!--  CSS -->
+<style>
+  .sliding-images {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, #004c70, #002c48);
+    color: white;
+  }
+
+  .sliding-images h3 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .swiper-container.sliding-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .slide-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px; 
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+  }
+
+  .swiper-pagination.sliding-pagination {
+    bottom: 10px;
+  }
+
+  .swiper-button-next.sliding-next,
+  .swiper-button-prev.sliding-prev {
+    color: white;
+  }
+
+  .swiper-button-next.sliding-next:hover,
+  .swiper-button-prev.sliding-prev:hover {
+    color: #00bfff;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sliding-images h3 {
+      font-size: 1.8rem;
+    }
+
+    .slide-heading {
+      font-size: 1.2rem;
+    }
+
+    .swiper-slide img {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sliding-images h3 {
+      font-size: 1.5rem;
+    }
+
+    .slide-heading {
+      font-size: 1rem;
+    }
+
+    .swiper-slide img {
+      height: 180px;
+    }
+  }
+</style>
+
+
+<script>
+  const slidingSwiper = new Swiper('.swiper-container.sliding-container', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination.sliding-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next.sliding-next',
+      prevEl: '.swiper-button-prev.sliding-prev',
+    },
+  });
+</script>
+<section id="key-features" class="key-features">
+  <div class="features-container">
+    <h3>Key Features and Uniqueness</h3>
+    <p>What sets Aqualnsight apart?</p>
+    <ul class="features-list">
+      <li><i class="fas fa-tint"></i> Real-time predictions of groundwater levels using cutting-edge algorithms.</li>
+      <li><i class="fas fa-leaf"></i> Intuitive user interface for easy access to groundwater data and trends.</li>
+      <li><i class="fas fa-tools"></i> Comprehensive analysis and reports tailored to specific locations.</li>
+      <li><i class="fas fa-users"></i> Community-driven insights and contributions to local groundwater awareness.</li>
+      <li><i class="fas fa-globe"></i> Focused on sustainability and environmental conservation.</li>
+      <li><i class="fas fa-map"></i>Features an intuitive map showing groundwater conditions and nearby freshwater sources. </li>
+    </ul>
+  </div>
+</section>
+  </main>
+
+<!-- Report Section -->
+<section id="report-section" class="report-section">
+  <h3>Generate Detailed Reports</h3>
+  <p>Access comprehensive groundwater trend analysis in your area.</p>
+  <a href="report.html" class="report-btn">View Report</a>
+</section>
+<!-- CSS for Report Section -->
+<style>
+  .report-section {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, #f0f8ff, #87cefa);
+    color: #002c48;
+  }
+  .report-section h3 { font-size: 2rem; font-weight: bold; margin-bottom: 15px; }
+  .report-section p { font-size: 1.2rem; margin-bottom: 20px; }
+  .report-btn {
+    padding: 10px 20px; background: #004c70; color: white; text-decoration: none;
+    font-weight: bold; border-radius: 5px; transition: background 0.3s ease-in-out;
+  }
+  .report-btn:hover { background: #002c48; }
+</style>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <p><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></p>
+      </div>
+      <div class="footer-social">
+        <h5>Follow Us</h5>
+        <a href="https://www.instagram.com/aqualnsight43/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.facebook.com/share/vfpM3uuqkvnbCmYc/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+      <div class="footer-terms">
+        <p><a href="terms_condition.html"><i class="fas fa-file-alt"></i> Terms and Conditions</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Aqualnsight. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    document.getElementById('predictor-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const latitude = document.getElementById('latitude').value;
+      const longitude = document.getElementById('longitude').value;
+      const state = document.getElementById('state').value;
+      const pincode = document.getElementById('pincode').value;
+
+      const prediction = `Based on your location (Latitude: ${latitude}, Longitude: ${longitude}), 
+                     in ${state}, Pincode: ${pincode}, the groundwater level is predicted to be 
+                     moderate with an average depth of 15 meters.`;
+
+      // Display the result
+      document.getElementById('result-data').innerText = prediction;
+      document.getElementById('prediction-result').style.display = 'block';
+    });
+  </script>
+  <!-- Scroll-to-Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">&uarr;</button>
+
+<style>
+  /* Scroll-to-Top Button Styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #004c70;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .scroll-to-top:hover {
+    background: #002c48;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+  // Scroll-to-Top Functionality
+  window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

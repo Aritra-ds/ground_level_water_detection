@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #28f0be, #6791ec);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .subscription-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .subscription-container h1 {
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            color: #ff7e5f;
+        }
+
+        .subscription-container p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #ff5733;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #ff5733;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            border-color: #ff7e5f;
+            outline: none;
+        }
+
+        .payment-option {
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 15px;
+            background: #f9f9f9;
+        }
+
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            border: 3px solid #ff7e5f;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        .payment-logos img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+        }
+
+        .payment-or {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff5733;
+            margin: 20px 0;
+        }
+
+        .subscribe-btn {
+            width: 100%;
+            padding: 15px;
+            background: #ff5733;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .subscribe-btn:hover {
+            background: #c4412e;
+        }
+
+        .sign-in-link {
+            font-size: 0.9rem;
+            color: #ff5733;
+            margin-top: 10px;
+        }
+
+        .sign-in-link a {
+            color: #ff5733;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sign-in-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="subscription-container">
+        <h1>Subscribe Now</h1>
+        <p>Unlock all features for just <span class="price">₹99</span> (permanent)</p>
+        <form id="subscription-form" onsubmit="subscribe(event)">
+            <div class="form-section">
+                <h2>Account Details</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <!-- Sign In message with link -->
+                <div class="sign-in-link">
+                    <span>Don't have an account? <a href="water_sign_in.html">Sign In</a></span>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Payment Options</h2>
+                <div class="payment-option">
+                    <h3>Debit Card</h3>
+                    <label for="debit-card-number">Card Number:</label>
+                    <input type="text" id="debit-card-number" placeholder="Enter your debit card number" required>
+                    <label for="debit-expiry">Expiry Date:</label>
+                    <input type="month" id="debit-expiry" required>
+                    <label for="debit-cvv">CVV:</label>
+                    <input type="text" id="debit-cvv" maxlength="3" placeholder="CVV" required>
+                </div>
+                
+                <!-- OR in the middle -->
+                <div class="payment-or">OR</div>
+                
+                <div class="payment-option">
+                    <h3>Credit Card</h3>
+                    <label for="credit-card-number">Card Number:</label>
+                    <input type="text" id="credit-card-number" placeholder="Enter your credit card number" required>
+                    <label for="credit-expiry">Expiry Date:</label>
+                    <input type="month" id="credit-expiry" required>
+                    <label for="credit-cvv">CVV:</label>
+                    <input type="text" id="credit-cvv" maxlength="3" placeholder="CVV" required>
+                </div>
+
+                <!-- OR in the middle -->
+                <div class="payment-or">OR</div>
+                
+                <div class="payment-option">
+                    <h3>UPI</h3>
+                    <div class="payment-logos">
+                        <img src="https://techstory.in/wp-content/uploads/2018/07/PhonePe.png" alt="PhonePe Logo">
+                        <img src="https://cdn4.iconfinder.com/data/icons/circle-payment/32/payment_006-amazon-512.png" alt="Amazon Pay Logo">
+                        <img src="https://logospng.org/download/google-pay/logo-google-pay-1024.png" alt="Google Pay Logo">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="subscribe-btn">Subscribe for ₹99</button>
+        </form>
+    </div>
+    <script>
+        function subscribe(event) {
+            event.preventDefault();
+            alert('Thank you for subscribing! You will now have permanent access for ₹99.');
+        }
+    </script>
+</body>
+</html>
