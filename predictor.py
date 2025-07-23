@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Load pre-trained model and dataset
 model = pickle.load(open("ayush2.pkl", "rb"))  # Replace with your model filename
-dataset = pd.read_csv("ayush2.csv")  # Replace with your dataset filename
+dataset = pd.read_csv("aritra.csv")  # Replace with your dataset filename
 
 @app.route("/")
 def index():
